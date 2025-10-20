@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Book Management System</h1>
+            <p>Manage your library collection</p>
+        </header>
+
+        <div class="form-section">
+            <h2>Add New Book</h2>
+            <form id="bookForm">
+                <div class="form-group">
+                    <input type="text" id="title" placeholder="Book Title" required>
+                    <input type="text" id="author" placeholder="Author" required>
+                    <input type="text" id="isbn" placeholder="ISBN" required>
+                    <select id="status" required>
+                        <option value="">Select Status</option>
+                        <option value="available">Available</option>
+                        <option value="borrowed">Borrowed</option>
+                    </select>
+                </div>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+
+        <div class="books-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search books by title, author, or ISBN...">
+            </div>
+            
+            <div id="bookCount" class="book-count"></div>
+            
+            <div class="books-grid" id="booksGrid">
+                <!-- Books will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
